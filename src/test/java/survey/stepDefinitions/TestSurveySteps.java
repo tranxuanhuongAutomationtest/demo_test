@@ -47,6 +47,5 @@ public class TestSurveySteps {
     public void verifyExists(String arg0) {
         successfulPage = PageGeneratorManager.openQATestSuccessfulPage(driver);
         Assert.assertTrue(successfulPage.isTextDisplayed());
-
     }
 }

@@ -35,7 +35,6 @@ public class ServiceHooks extends AbstractTest {
 	public void afterHook(Scenario scenario){
 		log.info("after every scenario");
 		driver.close();
-
 	}
 
 

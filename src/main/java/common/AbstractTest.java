@@ -13,7 +13,7 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
-public abstract class AbstractTest{
+public abstract class AbstractTest extends  ThucydidesWebDriverSupport{
 	String userDir = GlobalConstants.ROOT_FOLDER;
 	@Managed
 	protected static ThreadLocal<WebDriver> threadLocalDriver = new ThreadLocal<>();
@@ -52,6 +52,7 @@ public abstract class AbstractTest{
 		threadLocalDriver.get().manage().window().maximize();
 		threadLocalDriver.get().get(url);
 		threadLocalDriver.get().manage().timeouts().implicitlyWait(GlobalConstants.LONG_TIMEOUT, TimeUnit.SECONDS);
+		useDriver(threadLocalDriver.get());
 		return threadLocalDriver.get();
 	}
 	

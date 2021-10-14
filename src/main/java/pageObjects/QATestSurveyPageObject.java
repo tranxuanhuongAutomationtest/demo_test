@@ -14,17 +14,13 @@ public class QATestSurveyPageObject extends AbstractPage {
         this.driver= driver;
     }
     @Step
-    @Screenshots(beforeAndAfterEachStep = true)
     public void clickToGoodRadioButton(){
-        Serenity.takeScreenshot();
         waitElementClickable(driver, QATestSurveyUI.GOOD_RADIO_TEXT);
         clickToElement(driver, QATestSurveyUI.GOOD_RADIO_BUTTON);
     }
 
     @Step
-    @Screenshots(beforeAndAfterEachStep = true)
     public void clickToNextButton(){
-        Serenity.takeScreenshot();
         waitElementClickable(driver, QATestSurveyUI.NEXT_BUTTON);
         clickToElementByJS(driver, QATestSurveyUI.NEXT_BUTTON);
     }
