@@ -27,7 +27,7 @@ public abstract class AbstractPage {
 	private Actions action;
 
 
-	// WebBrowser
+	// WebBrowser//WebElement
 	public void openPageUrl(WebDriver driver, String pageUrl) {
 		driver.get(pageUrl);
 	}
